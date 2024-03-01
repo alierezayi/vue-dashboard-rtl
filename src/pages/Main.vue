@@ -1,9 +1,5 @@
+<script setup></script>
+
 <template>
-    <div>
-        Main page
-    </div>
+  <div class=""></div>
 </template>
-
-<script setup>
-
-</script>

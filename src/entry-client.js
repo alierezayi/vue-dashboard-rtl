@@ -1,4 +1,4 @@
-import "./style.css";
+import "./global.css";
 import { createApp } from "./main";
 import router from "./utils/router";
 
