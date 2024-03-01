@@ -1,5 +1,3 @@
-import { BeakerIcon } from "@heroicons/vue/24/solid";
-
 export const links = {
   main: [
     { name: "dashboard", text: "صفحه اصلی", href: "/" },

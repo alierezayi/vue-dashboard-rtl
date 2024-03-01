@@ -1,7 +1,23 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Main from "../pages/Main.vue";
+import Products from "../pages/Products.vue";
+import Customers from "../pages/Customers.vue";
+import Order from "../pages/Order.vue";
+import Billing from "../pages/Billing.vue";
+import Notifications from "../pages/Notifications.vue";
+import Settings from "../pages/Settings.vue";
+import Support from "../pages/Support.vue";
 
-const routes = [{ path: "/", name: "main", component: Main }];
+const routes = [
+  { path: "/", name: "main", component: Main },
+  { path: "/products", name: "products", component: Products },
+  { path: "/customers", name: "customers", component: Customers },
+  { path: "/order", name: "order", component: Order },
+  { path: "/billing", name: "billing", component: Billing },
+  { path: "/notifications", name: "notifications", component: Notifications },
+  { path: "/settings", name: "settings", component: Settings },
+  { path: "/support", name: "support", component: Support },
+];
 
 const router = createRouter({
   history: createWebHistory(),

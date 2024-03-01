@@ -8,9 +8,9 @@ import { ChevronLeftIcon } from "@heroicons/vue/24/outline";
 
 <template>
   <div
-    class="hidden md:flex flex-col h-full md:w-[200px] xl:w-[250px] rounded-xl p-3 overflow-y-auto bg-gray-200"
+    class="hidden md:flex flex-col h-full md:w-[200px] xl:w-[250px] rounded-xl px-3 pt-5 pb-3 overflow-y-auto bg-gray-200"
   >
-    <div class="flex items-center gap-2">
+    <div class="flex items-center gap-2 px-2">
       <img src="/images/logo.png" alt="" class="w-6" />
       <span class="font-bold">پنل مدیریتی</span>
     </div>
