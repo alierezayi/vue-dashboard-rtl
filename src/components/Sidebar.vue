@@ -10,8 +10,6 @@ import { useSidebarStore } from "../stores/sidebar";
 import { ref, watch } from "vue";
 
 const sidebar = useSidebarStore();
-console.log(sidebar);
-const isOpen = ref(true);
 </script>
 
 <template>
@@ -19,14 +17,14 @@ const isOpen = ref(true);
     :class="
       twMerge(
         'md:flex flex-col h-full md:w-[250px] rounded-xl px-5 md:px-3 pt-5 pb-3 overflow-y-auto bg-gray-200 md:static',
-        isOpen ? 'flex absolute inset-0' : 'hidden'
+        sidebar.isOpen ? 'flex absolute inset-0' : 'hidden'
       )
     "
   >
     <div class="flex justify-between">
       <Logo size="6" />
 
-      <button @click="isOpen = false" class="md:hidden">
+      <button @click="sidebar.close()" class="md:hidden">
         <XMarkIcon class="w-6" />
       </button>
     </div>
