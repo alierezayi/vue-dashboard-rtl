@@ -8,8 +8,15 @@ export const links = {
   ],
 
   other: [
-    { name: "notifications", text: "پیام ها", href: "/notifications" },
+    { name: "notifications", text: "نوتیف ها", href: "/notifications" },
     { name: "settings", text: "تنظیمات", href: "/settings" },
     { name: "support", text: "پشتیبانی", href: "/support" },
   ],
+  account: {
+    name: "account",
+    text: "علی رضایی",
+    email: "im1.bitcode@gmail.com",
+    href: "/account",
+    imageUrl: "/images/profile.jpg",
+  },
 };

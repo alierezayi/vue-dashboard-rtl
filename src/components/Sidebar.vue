@@ -1,18 +1,34 @@
 <script setup>
+import { twMerge } from "tailwind-merge";
 import { links } from "../utils/refrences";
 import MenuItem from "./MenuItem.vue";
 import MenuIcons from "./MenuIcons.vue";
 import MenuItems from "./MenuItems.vue";
-import { ChevronLeftIcon } from "@heroicons/vue/24/outline";
+import Logo from "./Logo.vue";
+import { ChevronLeftIcon, XMarkIcon } from "@heroicons/vue/24/outline";
+import { useSidebarStore } from "../stores/sidebar";
+import { ref, watch } from "vue";
+
+const sidebar = useSidebarStore();
+console.log(sidebar);
+const isOpen = ref(true);
 </script>
 
 <template>
   <div
-    class="hidden md:flex flex-col h-full md:w-[200px] xl:w-[250px] rounded-xl px-3 pt-5 pb-3 overflow-y-auto bg-gray-200"
+    :class="
+      twMerge(
+        'md:flex flex-col h-full md:w-[250px] rounded-xl px-5 md:px-3 pt-5 pb-3 overflow-y-auto bg-gray-200 md:static',
+        isOpen ? 'flex absolute inset-0' : 'hidden'
+      )
+    "
   >
-    <div class="flex items-center gap-2 px-2">
-      <img src="/images/logo.png" alt="" class="w-6" />
-      <span class="font-bold">پنل مدیریتی</span>
+    <div class="flex justify-between">
+      <Logo size="6" />
+
+      <button @click="isOpen = false" class="md:hidden">
+        <XMarkIcon class="w-6" />
+      </button>
     </div>
 
     <div class="divide-y divide-gray-300 mt-5">
@@ -31,14 +47,17 @@ import { ChevronLeftIcon } from "@heroicons/vue/24/outline";
       </MenuItems>
     </div>
 
-    <MenuItem href="/account" class-name="bg-white mt-auto">
-      <div class="text-xs flex items-center gap-4">
-        <img src="/images/profile.jpg" class="w-9 h-9 rounded-full" />
+    <MenuItem :href="links.account.href" class-name="bg-white mt-auto">
+      <div class="text-xs flex items-center md:justify-between w-full">
+        <img
+          :src="links.account.imageUrl"
+          class="w-9 h-9 rounded-full ml-4 md:ml-0"
+        />
         <div>
-          <div>im1.bitcode@gmail.com</div>
-          <div>علی رضایی</div>
+          <div class="truncate">{{ links.account.email }}</div>
+          <div class="truncate">{{ links.account.text }}</div>
         </div>
-        <ChevronLeftIcon class="w-5" />
+        <ChevronLeftIcon class="w-5 mr-auto md:mr-0" />
       </div>
     </MenuItem>
   </div>

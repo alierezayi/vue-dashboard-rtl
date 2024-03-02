@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from "vue-router";
+import { createRouter, createWebHistory, createMemoryHistory } from "vue-router";
 import Main from "../pages/Main.vue";
 import Products from "../pages/Products.vue";
 import Customers from "../pages/Customers.vue";
@@ -7,6 +7,7 @@ import Billing from "../pages/Billing.vue";
 import Notifications from "../pages/Notifications.vue";
 import Settings from "../pages/Settings.vue";
 import Support from "../pages/Support.vue";
+import Account from "../pages/Account.vue";
 
 const routes = [
   { path: "/", name: "main", component: Main },
@@ -17,10 +18,13 @@ const routes = [
   { path: "/notifications", name: "notifications", component: Notifications },
   { path: "/settings", name: "settings", component: Settings },
   { path: "/support", name: "support", component: Support },
+  { path: "/account", name: "account", component: Account },
 ];
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: import.meta.env.SSR
+    ? createMemoryHistory("/")
+    : createWebHistory("/"),
   routes,
 });
 
