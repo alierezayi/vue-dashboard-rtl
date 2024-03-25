@@ -7,7 +7,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <div class="flex items-center gap-2 px-2">
+  <div class="flex items-center gap-2 md:px-2">
     <img src="/images/logo.png" alt="" :class="`w-${size}`" />
     <span class="font-bold">پنل مدیریتی</span>
   </div>

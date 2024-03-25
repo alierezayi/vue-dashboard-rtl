@@ -1,5 +1,9 @@
-<script setup></script>
+<script setup>
+import DataGrid from "../components/main/DataGrid.vue";
+</script>
 
 <template>
-  <div>Main</div>
+  <div>
+    <DataGrid />
+  </div>
 </template>

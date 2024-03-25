@@ -8,15 +8,28 @@ export const links = {
   ],
 
   other: [
-    { name: "notifications", text: "نوتیف ها", href: "/notifications" },
+    { name: "profile", text: "پروفایل", href: "/profile" },
     { name: "settings", text: "تنظیمات", href: "/settings" },
+    { name: "notifications", text: "نوتیف ها", href: "/notifications" },
     { name: "support", text: "پشتیبانی", href: "/support" },
   ],
-  account: {
-    name: "account",
-    text: "علی رضایی",
-    email: "im1.bitcode@gmail.com",
-    href: "/account",
-    imageUrl: "/images/profile.jpg",
-  },
 };
+
+export const total = [
+  {
+    title: "فروش",
+    value: "112,510,00",
+  },
+  {
+    title: "سفارشات",
+    value: "568",
+  },
+  {
+    title: "سود",
+    value: "56",
+  },
+  {
+    title: "بازدید کنندگان",
+    value: "1540",
+  },
+];

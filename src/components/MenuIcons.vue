@@ -8,6 +8,7 @@ import {
   BellIcon,
   Cog6ToothIcon,
   QuestionMarkCircleIcon,
+  UserIcon,
 } from "@heroicons/vue/24/outline";
 
 defineProps({
@@ -24,4 +25,5 @@ defineProps({
   <BellIcon v-if="name === 'notifications'" class="w-[18px]" />
   <Cog6ToothIcon v-if="name === 'settings'" class="w-[18px]" />
   <QuestionMarkCircleIcon v-if="name === 'support'" class="w-[18px]" />
+  <UserIcon v-if="name === 'profile'" class="w-[18px]" />
 </template>

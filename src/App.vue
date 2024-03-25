@@ -9,7 +9,9 @@ import Sidebar from "./components/Sidebar.vue";
 
     <main class="flex-1 h-full overflow-y-auto rounded-lg">
       <Header />
-      <router-view></router-view>
+      <div class="px-1 md:px-5 mt-10">
+        <router-view></router-view>
+      </div>
     </main>
   </div>
 </template>
