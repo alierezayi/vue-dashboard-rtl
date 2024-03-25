@@ -13,7 +13,6 @@ const vClickOutside = {
     el.__vueClickOutside__ = handleClickOutside;
   },
   unmounted: (el) => {
-    // Remove event listener when the directive is unmounted
     document.removeEventListener("click", el.__vueClickOutside__);
     delete el.__vueClickOutside__;
   },
@@ -37,7 +36,7 @@ const closePopup = () => {
 </script>
 
 <template>
-  <div class="w-full md:max-w-md relative">
+  <div class="w-full lg:max-w-md relative">
     <div class="bg-gray-200 rounded-lg flex items-center px-4 gap-1">
       <MagnifyingGlassIcon class="w-4 h-4 text-gray-500" />
       <input

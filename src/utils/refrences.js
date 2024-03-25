@@ -17,19 +17,27 @@ export const links = {
 
 export const total = [
   {
-    title: "فروش",
-    value: "112,510,00",
-  },
-  {
-    title: "سفارشات",
-    value: "568",
-  },
-  {
-    title: "سود",
-    value: "56",
-  },
-  {
     title: "بازدید کنندگان",
-    value: "1540",
+    value: "1540 نفر",
+    comparison: "14.45% +",
+    icon: "user-group",
+  },
+  {
+    title: "فروش کل",
+    value: "124",
+    comparison: "0.12% -",
+    icon: "shopping-bag",
+  },
+  {
+    title: "درآمد کل",
+    value: "30,510,000 تومان",
+    comparison: "3.67% +",
+    icon: "banknotes",
+  },
+  {
+    title: "سود کل",
+    value: "56% +",
+    comparison: "26.55% +",
+    icon: "receipt-percent",
   },
 ];

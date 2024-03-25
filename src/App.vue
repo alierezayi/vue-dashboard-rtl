@@ -7,7 +7,7 @@ import Sidebar from "./components/Sidebar.vue";
   <div class="flex h-full p-2 relative">
     <Sidebar />
 
-    <main class="flex-1 h-full overflow-y-auto rounded-lg">
+    <main class="flex-1 h-full overflow-y-auto rounded-lg pt-2">
       <Header />
       <div class="px-1 md:px-5 mt-10">
         <router-view></router-view>

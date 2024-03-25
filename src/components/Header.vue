@@ -18,7 +18,7 @@ const sidebar = useSidebarStore();
     </div>
 
     <div class="flex justify-between items-center px-1 md:px-5">
-      <div class="flex gap-4 items-center">
+      <div class="gap-4 items-center hidden lg:flex">
         <img
           src="/images/profile.jpg"
           alt="profile"
